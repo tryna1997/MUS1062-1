@@ -1,0 +1,6 @@
+﻿https://github.com/FanQTW/WarframeTalk.git
+1104105301-四子三丙 林致頡
+1104105302-四子三丙 嚴濰凡
+
+master 主支
+FanQ_branch 分支後合併回master
