@@ -1,0 +1,7 @@
+https://github.com/Jacklintw/WarframeTalk.git
+1104105301-四子三丙 林致頡 (Jacklintw)
+1104105302-四子三丙 嚴濰凡 (FanQTW)
+1104105343-四子三丙 楊永楠 (YangYongNan)
+
+master 主支
+Jacklintw 分支後合併回master
