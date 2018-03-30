@@ -5,6 +5,6 @@ https://github.com/ShengYaoo/NewRepo/network
 1104105303-四子三丙 邱昱軒(yuSyuan)  branch(更改程式內容)
 1104105336-四子三丙 陳秉豐(tryna1997)  branch(更改程式內容)
 1104105302-四子三丙 嚴濰凡(FanQTW) branch(新增branchTest資料夾)
-
+1104105348-四子三丙 謝政憲(husano896) branch(xFly_Kaze分支)
 master 主支
 shengYaoo 分支後合併回master
