@@ -1,6 +1,7 @@
 ﻿using Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,47 +11,40 @@ namespace ConsoleApplication1
 {
     class Program
     {
-        static Repository.IRepository _db;
+        static YC.Repository.IRepository _rep;
 
         static void Main(string[] args)
         {
-            List<Object> datas;
-            var t = AppDomain.CurrentDomain.BaseDirectory;
+            var t = YC.Shared.Utils.GetDataPath();
+
+            
             //組員1
-            _db = new Repository.OpenDataRepository();
-            datas = FindOpenData();
-            InsertOpenData(datas);
+            _rep = new YC.Repository.OpenDataRepository();
 
+            var datas = _rep.Find().OfType<YC.Models.OpenData>().ToList();
 
-
-            Console.ReadKey();
             
-
-        }
-
-
-        public static List<Object> FindOpenData()
-        {
-            return _db.Find();
-        }
-
-        public static void InsertOpenData(List<Object> datas)
-        {
-            
-
-
             Console.WriteLine(string.Format("新增{0}筆OpenData:開始", datas.Count));
             datas.ForEach(x =>
             {
 
-                _db.Create(x);
+                _rep.Create(x);
 
 
             });
             Console.WriteLine(string.Format("新增OpenData:結束"));
 
+            Console.ReadKey();
+
 
         }
+
+
+
+
+
+
+        
 
 
 

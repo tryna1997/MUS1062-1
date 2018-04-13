@@ -7,7 +7,7 @@
     <ProjectGuid>{F144B5D8-4ECA-4C7F-AD6D-6A156ADF0BDA}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <RootNamespace>YC</RootNamespace>
     <AssemblyName>ConsoleApplication1</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -58,10 +58,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseRepository.cs" />
+    <Compile Include="Models\OpenData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\OpenDataRepository.cs" />
+    <Compile Include="Repository\StationRepository.cs" />
+    <Compile Include="Shared\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -80,15 +84,13 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="App_Data\nodeDB.ldf">
-      <DependentUpon>nodeDB.mdf</DependentUpon>
+    <Content Include="App_Data\OpenData.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="App_Data\nodeDB.mdf">
+    <Content Include="App_Data\opendata.xml" />
+    <Content Include="App_Data\OpenData_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="App_Data\opendata.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>OpenData.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
